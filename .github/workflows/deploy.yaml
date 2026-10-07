@@ -46,9 +46,6 @@ jobs:
           html_path: ${{ env.PUBLISH_DIR }}/index.html
           base_href: ${{ env.BASE_HREF }}
 
-      - name: Add SPA fallback
-        run: cp release/wwwroot/index.html release/wwwroot/404.html
-
       - name: Setup Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
