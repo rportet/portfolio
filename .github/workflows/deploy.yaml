@@ -21,6 +21,7 @@ concurrency:
 
 env:
   BASE_HREF: /portfolio/
+  PUBLISH_DIR: release/wwwroot
 
 jobs:
   build:
@@ -37,8 +38,13 @@ jobs:
       - name: Publish
         run: dotnet publish src/Portfolio/Portfolio.csproj -c Release -o release
 
-      - name: Set base href
-        run: sed -i 's|<base href="/" />|<base href="${{ env.BASE_HREF }}" />|' release/wwwroot/index.html
+      # Pinned to the latest release (v1). The reference static.yml labels this SHA "v1.1.0",
+      # but it is the v1 tag; v1.1.0 is a tag without a GitHub release.
+      - name: Rewrite base href
+        uses: SteveSandersonMS/ghaction-rewrite-base-href@5b54862a8831e012d4f1a8b2660894415fdde8ec # v1
+        with:
+          html_path: ${{ env.PUBLISH_DIR }}/index.html
+          base_href: ${{ env.BASE_HREF }}
 
       - name: Add SPA fallback
         run: cp release/wwwroot/index.html release/wwwroot/404.html
@@ -49,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
-          path: release/wwwroot
+          path: ${{ env.PUBLISH_DIR }}
 
   deploy:
     needs: build
