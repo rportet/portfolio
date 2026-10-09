@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8" />
@@ -7,6 +7,39 @@
     <title>Portfolio</title>
     <base href="/" />
     <link rel="preload" id="webassembly" />
+    <script>
+        // Applies the color mode before the first paint (and before Blazor starts) to avoid a flash.
+        // Reduced from the color mode toggler of Bootstrap's docs:
+        // https://getbootstrap.com/docs/5.3/customize/color-modes/#javascript
+        // Copyright 2011-2025 The Bootstrap Authors, licensed under CC BY 3.0.
+        // The stored choice ("light" or "dark") is written by wwwroot/js/theme.js.
+        (() => {
+            'use strict'
+
+            const darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+            const getStoredTheme = () => {
+                try {
+                    const theme = localStorage.getItem('theme')
+                    return theme === 'light' || theme === 'dark' ? theme : null
+                } catch {
+                    // localStorage can be unavailable (privacy settings).
+                    return null
+                }
+            }
+
+            const getPreferredTheme = () => getStoredTheme() ?? (darkQuery.matches ? 'dark' : 'light')
+
+            document.documentElement.setAttribute('data-bs-theme', getPreferredTheme())
+
+            // Follow the system setting while the visitor has not made a choice.
+            darkQuery.addEventListener('change', () => {
+                if (!getStoredTheme()) {
+                    document.documentElement.setAttribute('data-bs-theme', getPreferredTheme())
+                }
+            })
+        })()
+    </script>
     <!-- Bootstrap v5.3.8, compiled CSS only, from the official download page:
          https://getbootstrap.com/docs/5.3/getting-started/download/ -->
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
