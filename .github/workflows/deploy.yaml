@@ -1,3 +1,8 @@
+# Based on the official reference for Blazor WebAssembly on GitHub Pages:
+# https://learn.microsoft.com/aspnet/core/blazor/host-and-deploy/webassembly/github-pages
+# https://github.com/dotnet/blazor-samples/blob/main/.github/workflows/static.yml
+# Actions are pinned by commit SHA, as recommended by GitHub:
+# https://docs.github.com/actions/writing-workflows/choosing-what-your-workflow-does/using-pre-written-building-blocks-in-your-workflow#using-shas
 name: Deploy to GitHub Pages
 
 on:
@@ -16,32 +21,38 @@ concurrency:
 
 env:
   BASE_HREF: /portfolio/
+  PUBLISH_DIR: release/wwwroot
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
 
       - name: Setup .NET
-        uses: actions/setup-dotnet@v5
+        uses: actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d # v5.0.0
         with:
           dotnet-version: 10.0.x
 
       - name: Publish
         run: dotnet publish src/Portfolio/Portfolio.csproj -c Release -o release
 
-      - name: Set base href
-        run: sed -i 's|<base href="/" />|<base href="${{ env.BASE_HREF }}" />|' release/wwwroot/index.html
+      # Pinned to the latest release (v1). The reference static.yml labels this SHA "v1.1.0",
+      # but it is the v1 tag; v1.1.0 is a tag without a GitHub release.
+      - name: Rewrite base href
+        uses: SteveSandersonMS/ghaction-rewrite-base-href@5b54862a8831e012d4f1a8b2660894415fdde8ec # v1
+        with:
+          html_path: ${{ env.PUBLISH_DIR }}/index.html
+          base_href: ${{ env.BASE_HREF }}
 
-      - name: Add SPA fallback
-        run: cp release/wwwroot/index.html release/wwwroot/404.html
+      - name: Setup Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
-          path: release/wwwroot
+          path: ${{ env.PUBLISH_DIR }}
 
   deploy:
     needs: build
@@ -52,4 +63,4 @@ jobs:
     steps:
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
