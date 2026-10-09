@@ -94,7 +94,8 @@ For any change to configuration, infrastructure, build, deployment or dependenci
 ## Git workflow
 
 - Never commit directly to `main`. One branch and one pull request per task, kept small.
-- Branch names: `feat/…`, `fix/…`, `ci/…`, `docs/…`, `chore/…`.
+- After implementing a task, **stop before committing**: leave the changes uncommitted, list the modified files with a one-line summary each, and wait for Rémy's review. Commit only when he explicitly says so, then propose the commit message(s).
+- Never push without explicit approval.- Branch names: `feat/…`, `fix/…`, `ci/…`, `docs/…`, `chore/…`.
 - Commit messages in English, following Conventional Commits (`feat:`, `fix:`, `ci:`, `docs:`…).
 - Ask before adding any NuGet package, npm package or third-party GitHub Action.
 - Never commit secrets, personal data other than what is already public on the site, or
