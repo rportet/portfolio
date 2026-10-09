@@ -1,3 +1,26 @@
+/* Self-hosted fonts (no request to Google Fonts, for GDPR compliance).
+   Variable woff2 files from the official repositories, licensed under the SIL OFL 1.1
+   (see OFL.txt next to each file):
+   - Figtree: https://github.com/erikdkennedy/figtree (v2.0.3, commit 032dfa7)
+   - Bricolage Grotesque: https://github.com/ateliertriay/bricolage (commit 84745e5)
+   Axis ranges as published in the google/fonts METADATA.pb files. */
+@font-face {
+    font-family: "Figtree";
+    src: url("../fonts/figtree/figtree-variable.woff2") format("woff2");
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Bricolage Grotesque";
+    src: url("../fonts/bricolage-grotesque/bricolage-grotesque-variable.woff2") format("woff2");
+    font-weight: 200 800;
+    font-stretch: 75% 100%;
+    font-style: normal;
+    font-display: swap;
+}
+
 .valid.modified:not([type=checkbox]) {
     outline: 1px solid #26b050;
 }
