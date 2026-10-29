@@ -18,7 +18,7 @@ choice, explain the reasoning briefly in the pull request description.
 - Bootstrap 5.3, **CSS only**. Do not use Bootstrap's JavaScript plugins (collapse, offcanvas,
   scrollspy…): interactivity is implemented in Blazor components (C#), with minimal JS interop
   only when the browser API requires it (localStorage, `data-bs-theme`, IntersectionObserver).
-- Hosted on GitHub Pages, deployed by GitHub Actions (`.github/workflows/deploy.yml`).
+- Hosted on GitHub Pages, deployed by GitHub Actions (`.github/workflows/deploy.yaml`).
 - Tests (later): xUnit + bUnit in `tests/Portfolio.Tests`.
 
 ## Repository layout
@@ -63,6 +63,10 @@ Always run `dotnet build` (and `dotnet test` when tests exist) before declaring 
 - Supported cultures: `fr` (default) and `en`. The culture is set at startup from the stored
   choice; changing language stores the choice and reloads the app (Microsoft's recommended
   approach for Blazor WebAssembly).
+- No `@code` blocks in `.razor` files: component logic goes in a partial class in
+  `Component.razor.cs` (code-behind), with `[Inject]` properties instead of `@inject`.
+  The `.razor` file contains markup only. See
+  https://learn.microsoft.com/aspnet/core/blazor/components/#partial-class-support
 - Component-specific styles use CSS isolation (`Component.razor.css`).
 
 ## Design rules
@@ -95,7 +99,8 @@ For any change to configuration, infrastructure, build, deployment or dependenci
 
 - Never commit directly to `main`. One branch and one pull request per task, kept small.
 - After implementing a task, **stop before committing**: leave the changes uncommitted, list the modified files with a one-line summary each, and wait for Rémy's review. Commit only when he explicitly says so, then propose the commit message(s).
-- Never push without explicit approval.- Branch names: `feat/…`, `fix/…`, `ci/…`, `docs/…`, `chore/…`.
+- Never push without explicit approval.
+- Branch names: `feat/…`, `fix/…`, `ci/…`, `docs/…`, `chore/…`.
 - Commit messages in English, following Conventional Commits (`feat:`, `fix:`, `ci:`, `docs:`…).
 - Ask before adding any NuGet package, npm package or third-party GitHub Action.
 - Never commit secrets, personal data other than what is already public on the site, or

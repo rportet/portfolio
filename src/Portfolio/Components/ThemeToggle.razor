@@ -1,7 +1,3 @@
-@implements IAsyncDisposable
-@inject IJSRuntime JS
-@inject IStringLocalizer<SharedResource> Loc
-
 <button type="button" class="theme-toggle rounded-circle" aria-label="@Label" @onclick="ToggleAsync">
     @* Half-filled circle (design spec section 5.1). *@
     <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
@@ -9,41 +5,3 @@
         <path d="M8 1.5a6.5 6.5 0 0 0 0 13z" fill="currentColor" />
     </svg>
 </button>
-
-@code {
-    private IJSObjectReference? module;
-    private string theme = "light";
-
-    private string Label => theme == "dark"
-        ? Loc["ThemeToggle_SwitchToLight"]
-        : Loc["ThemeToggle_SwitchToDark"];
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender)
-        {
-            module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/theme.js");
-            theme = await module.InvokeAsync<string>("getTheme");
-            StateHasChanged();
-        }
-    }
-
-    private async Task ToggleAsync()
-    {
-        if (module is null)
-        {
-            return;
-        }
-
-        theme = theme == "dark" ? "light" : "dark";
-        await module.InvokeVoidAsync("setTheme", theme);
-    }
-
-    public async ValueTask DisposeAsync()
-    {
-        if (module is not null)
-        {
-            await module.DisposeAsync();
-        }
-    }
-}
