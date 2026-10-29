@@ -1,7 +1,24 @@
-﻿@page "/"
+@page "/"
 
-<PageTitle>Home</PageTitle>
+@* Provisional test page to check fonts and colors in both themes.
+   It is replaced by the real home page (hero and sections) in a later pull request,
+   so its sample text is intentionally not localized. *@
 
-<h1>Hello, world!</h1>
+<PageTitle>Rémy Portet</PageTitle>
 
-Welcome to your new app.
+<h1>Rémy Portet</h1>
+
+<p class="lead">Développeur .NET junior. Accroche de test pour vérifier le style .lead sur deux lignes environ.</p>
+
+<section class="mt-5">
+    <h2>Titre de section</h2>
+
+    <h3>Titre de card</h3>
+    <p>Paragraphe de texte courant en Figtree, pour vérifier la taille, l'interligne et la couleur du corps de texte dans les deux thèmes.</p>
+
+    <ul class="list-unstyled d-flex flex-wrap gap-1" aria-label="Technologies">
+        <li class="rp-tag">Blazor</li>
+    </ul>
+
+    <button type="button" class="btn btn-primary">Bouton principal</button>
+</section>

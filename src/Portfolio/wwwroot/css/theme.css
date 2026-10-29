@@ -1,0 +1,97 @@
+/* Design tokens of the portfolio, from docs/design-spec.md section 4.
+   Loaded after bootstrap.min.css so these values override Bootstrap's defaults.
+   Bootstrap color modes: https://getbootstrap.com/docs/5.3/customize/color-modes/ */
+
+:root, [data-bs-theme=light] {
+  --bs-body-font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bs-body-font-size: 1rem;
+  --bs-body-line-height: 1.55;
+  --rp-font-display: "Bricolage Grotesque", system-ui, sans-serif;
+
+  --bs-body-bg: #F7F7F8;        --bs-body-bg-rgb: 247,247,248;
+  --bs-body-color: #121216;     --bs-body-color-rgb: 18,18,22;
+  --bs-emphasis-color: #121216;
+  --bs-secondary-color: #55555F;
+  --bs-secondary-bg: #FFFFFF;
+  --bs-tertiary-bg: #EFEFF2;
+  --bs-border-color: #E3E3E8;
+
+  --bs-primary: #484DD2;        --bs-primary-rgb: 72,77,210;
+  --bs-primary-text-emphasis: #3632B6;
+  --bs-primary-bg-subtle: #EBE9FB;
+  --bs-primary-border-subtle: #C9C6F4;
+  --bs-link-color: #3632B6;     --bs-link-color-rgb: 54,50,182;
+  --bs-link-hover-color: #3B39BD; --bs-link-hover-color-rgb: 59,57,189;
+  --bs-focus-ring-color: rgba(72,77,210,.40);
+
+  --bs-border-radius: 1rem;
+  --bs-border-radius-sm: .625rem;
+  --bs-border-radius-lg: 1.25rem;
+  --bs-border-radius-xl: 1.5rem;
+
+  --rp-surface: #FFFFFF;
+  --rp-text-muted-strong: #3A3A44;
+  --rp-nav: #4A4A55;
+  --rp-border-dashed: #D6D6DD;
+  --rp-timeline-dot-muted: #8A8A96;
+  --rp-primary-hover: #3B39BD;
+  --rp-on-primary: #FFFFFF;
+  --rp-accent-2: #B72200;  --rp-accent-2-hover: #9B1700;
+  --rp-accent-2-text: #9B2300;  --rp-accent-2-bg-subtle: #FBE9DF;
+  --rp-on-accent-2: #FFFFFF;
+  --rp-contrast-bg: #121216;  --rp-contrast-color: #FFFFFF;
+  --rp-contrast-muted: #B8B8C4;  --rp-contrast-accent: #93A4FF;
+  --rp-contrast-border: #3A3A44;
+  --rp-surface-hover: #FFFFFF;
+  --rp-shadow-hover: 0 8px 24px -8px rgba(18,18,22,.14);
+}
+
+[data-bs-theme=dark] {
+  --bs-body-bg: #101014;        --bs-body-bg-rgb: 16,16,20;
+  --bs-body-color: #F1F1F4;     --bs-body-color-rgb: 241,241,244;
+  --bs-emphasis-color: #F1F1F4;
+  --bs-secondary-color: #A6A6B3;
+  --bs-secondary-bg: #1A1A20;
+  --bs-tertiary-bg: #2A2A33;
+  --bs-border-color: #2A2A33;
+
+  --bs-primary: #93A4FF;        --bs-primary-rgb: 147,164,255;
+  --bs-primary-text-emphasis: #C9C4FF;
+  --bs-primary-bg-subtle: #2B2850;
+  --bs-primary-border-subtle: #3E3A72;
+  --bs-link-color: #C9C4FF;     --bs-link-color-rgb: 201,196,255;
+  --bs-link-hover-color: #ADBEFF; --bs-link-hover-color-rgb: 173,190,255;
+  --bs-focus-ring-color: rgba(147,164,255,.50);
+
+  --rp-surface: #1A1A20;
+  --rp-text-muted-strong: #D4D4DC;
+  --rp-nav: #C4C4CF;
+  --rp-border-dashed: #3A3A44;
+  --rp-timeline-dot-muted: #F1F1F4;
+  --rp-primary-hover: #ADBEFF;
+  --rp-on-primary: #101014;
+  --rp-accent-2: #FA8C58;  --rp-accent-2-hover: #FFAB82;
+  --rp-accent-2-text: #FFC8A8;  --rp-accent-2-bg-subtle: #3D2A1F;
+  --rp-on-accent-2: #101014;
+  --rp-contrast-bg: #F1F1F4;  --rp-contrast-color: #101014;
+  --rp-contrast-muted: #4A4A55;  --rp-contrast-accent: #484DD2;
+  --rp-contrast-border: #C9C9D2;
+  --rp-surface-hover: #20202A;
+  --rp-shadow-hover: none;
+}
+
+@media (max-width: 991.98px) {
+  :root {
+    --bs-border-radius: .875rem;
+    --bs-border-radius-lg: 1rem;
+    --bs-border-radius-xl: 1.25rem;
+  }
+}
+
+/* Fluid type scale (spec section 2.2), interpolated between 375px and 1200px viewports. */
+:root {
+  --rp-fs-display: clamp(3.75rem, 2.27rem + 6.3vw, 7rem);     /* 60 -> 112px */
+  --rp-fs-h2: clamp(2rem, 1.55rem + 1.94vw, 3rem);            /* 32 -> 48px */
+  --rp-fs-h3: clamp(1.3125rem, 1.114rem + .848vw, 1.75rem);   /* 21 -> 28px */
+  --rp-fs-lead: clamp(1rem, .915rem + .364vw, 1.1875rem);     /* 16 -> 19px */
+}

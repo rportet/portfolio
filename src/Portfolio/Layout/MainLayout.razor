@@ -1,3 +1,10 @@
 ﻿@inherits LayoutComponentBase
 
-@Body
+@* Provisional: the theme toggle moves into SiteHeader in a later pull request. *@
+<div class="container d-flex justify-content-end py-3">
+    <ThemeToggle />
+</div>
+
+<main class="container">
+    @Body
+</main>
