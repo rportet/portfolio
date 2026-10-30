@@ -1,7 +1,3 @@
-/* Design tokens of the portfolio, from docs/design-spec.md section 4.
-   Loaded after bootstrap.min.css so these values override Bootstrap's defaults.
-   Bootstrap color modes: https://getbootstrap.com/docs/5.3/customize/color-modes/ */
-
 :root, [data-bs-theme=light] {
   --bs-body-font-family: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bs-body-font-size: 1rem;
@@ -88,10 +84,9 @@
   }
 }
 
-/* Fluid type scale (spec section 2.2), interpolated between 375px and 1200px viewports. */
 :root {
-  --rp-fs-display: clamp(3.75rem, 2.27rem + 6.3vw, 7rem);     /* 60 -> 112px */
-  --rp-fs-h2: clamp(2rem, 1.55rem + 1.94vw, 3rem);            /* 32 -> 48px */
-  --rp-fs-h3: clamp(1.3125rem, 1.114rem + .848vw, 1.75rem);   /* 21 -> 28px */
-  --rp-fs-lead: clamp(1rem, .915rem + .364vw, 1.1875rem);     /* 16 -> 19px */
+  --rp-fs-display: clamp(3.75rem, 2.27rem + 6.3vw, 7rem);
+  --rp-fs-h2: clamp(2rem, 1.55rem + 1.94vw, 3rem);
+  --rp-fs-h3: clamp(1.3125rem, 1.114rem + .848vw, 1.75rem);
+  --rp-fs-lead: clamp(1rem, .915rem + .364vw, 1.1875rem);
 }

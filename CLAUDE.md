@@ -15,9 +15,7 @@ choice, explain the reasoning briefly in the pull request description.
 ## Tech stack
 
 - .NET 10, Blazor WebAssembly **standalone** (no server).
-- Bootstrap 5.3, **CSS only**. Do not use Bootstrap's JavaScript plugins (collapse, offcanvas,
-  scrollspy…): interactivity is implemented in Blazor components (C#), with minimal JS interop
-  only when the browser API requires it (localStorage, `data-bs-theme`, IntersectionObserver).
+- Bootstrap 5.3, **CSS only**. Do not use Bootstrap's JavaScript plugins (collapse, offcanvas, scrollspy…): interactivity is implemented in Blazor components (C#), with minimal JS interop only when the browser API requires it (localStorage, `data-bs-theme`, IntersectionObserver).
 - Hosted on GitHub Pages, deployed by GitHub Actions (`.github/workflows/deploy.yaml`).
 - Tests (later): xUnit + bUnit in `tests/Portfolio.Tests`.
 
@@ -52,31 +50,21 @@ Always run `dotnet build` (and `dotnet test` when tests exist) before declaring 
 
 ## Architecture rules
 
-- **Content is data, not markup.** Education, experiences and projects live in JSON files in
-  `wwwroot/data/`, deserialized into typed records in `Models/`. Adding a project must never
-  require editing a component.
-- **Localized content**: one JSON file per content type, with localized fields keyed by culture
-  (`{ "fr": "…", "en": "…" }`). Non-translatable fields (slug, tags, URLs, dates) are not duplicated.
-- **UI strings** (labels, buttons, section titles) go in `Resources/*.resx` and are read through
-  `IStringLocalizer<SharedResource>`. No hard-coded user-facing text in components.
+- **Content is data, not markup.** Education, experiences and projects live in JSON files in `wwwroot/data/`, deserialized into typed records in `Models/`. Adding a project must never require editing a component.
+- **Localized content**: one JSON file per content type, with localized fields keyed by culture (`{ "fr": "…", "en": "…" }`). Non-translatable fields (slug, tags, URLs, dates) are not duplicated.
+- **UI strings** (labels, buttons, section titles) go in `Resources/*.resx` and are read through `IStringLocalizer<SharedResource>`. No hard-coded user-facing text in components.
 - Components get content through `IContentService` (injected), never by fetching JSON directly.
-- Supported cultures: `fr` (default) and `en`. The culture is set at startup from the stored
-  choice; changing language stores the choice and reloads the app (Microsoft's recommended
-  approach for Blazor WebAssembly).
-- No `@code` blocks in `.razor` files: component logic goes in a partial class in
-  `Component.razor.cs` (code-behind), with `[Inject]` properties instead of `@inject`.
-  The `.razor` file contains markup only. See
-  https://learn.microsoft.com/aspnet/core/blazor/components/#partial-class-support
+- Supported cultures: `fr` (default) and `en`. The culture is set at startup from the stored choice; changing language stores the choice and reloads the app (Microsoft's recommended approach for Blazor WebAssembly).
+- No `@code` blocks in `.razor` files: component logic goes in a partial class in `Component.razor.cs` (code-behind), with `[Inject]` properties instead of `@inject`. The `.razor` file contains markup only. See https://learn.microsoft.com/aspnet/core/blazor/components/#partial-class-support
 - Component-specific styles use CSS isolation (`Component.razor.css`).
+- **No comments, ever**, in any file written or edited in this repository (C#, Razor, CSS, JS, HTML, JSON, YAML), with one exception: copyright and license notices required by third-party code are kept as they are. If something is not obvious, explain it in the summary given at review time and in the pull request description, never in the code. Vendored files in `wwwroot/lib/` are not edited.
 
 ## Design rules
 
 - Follow `docs/design-spec.md`. When the spec does not cover a case, ask instead of inventing.
-- **Never hard-code colors, font sizes or radii** in components: use the CSS variables
-  (`--bs-*` and the project's `--rp-*` tokens) defined in `wwwroot/css/theme.css`.
+- **Never hard-code colors, font sizes or radii** in components: use the CSS variables (`--bs-*` and the project's `--rp-*` tokens) defined in `wwwroot/css/theme.css`.
 - `theme.css` must be loaded after `bootstrap.min.css`.
-- Light/dark theme uses Bootstrap color modes (`data-bs-theme` on `<html>`). The initial theme is
-  applied by an inline script in `index.html` before Blazor starts, to avoid a flash.
+- Light/dark theme uses Bootstrap color modes (`data-bs-theme` on `<html>`). The initial theme is applied by an inline script in `index.html` before Blazor starts, to avoid a flash.
 - Mobile-first; desktop layout from the `lg` breakpoint.
 
 ## Accessibility
@@ -89,26 +77,22 @@ Always run `dotnet build` (and `dotnet test` when tests exist) before declaring 
 ## Sources (mandatory)
 
 For any change to configuration, infrastructure, build, deployment or dependencies:
-- base it on official documentation first (Microsoft Learn, GitHub Docs, getbootstrap.com,
-  official sample repositories such as `dotnet/blazor-samples`);
-- cite the source URL in the pull request description, and in a code comment when the
-  reason for a line is not obvious;
+- base it on official documentation first (Microsoft Learn, GitHub Docs, getbootstrap.com, official sample repositories such as `dotnet/blazor-samples`);
+- cite the source URL in the review summary and in the pull request description;
 - state explicitly when something comes from community practice rather than official docs.
 
 ## Git workflow
 
 - Never commit directly to `main`. One branch and one pull request per task, kept small.
-- After implementing a task, **stop before committing**: leave the changes uncommitted, list the modified files with a one-line summary each, and wait for Rémy's review. Commit only when he explicitly says so, then propose the commit message(s).
+- After implementing a task, **stop before committing**: leave the changes uncommitted, list the modified files with a one-line summary each, explain anything non-obvious (why a line exists, which source it comes from), and wait for Rémy's review. Commit only when he explicitly says so, then propose the commit message(s).
 - Never push without explicit approval.
 - Branch names: `feat/…`, `fix/…`, `ci/…`, `docs/…`, `chore/…`.
 - Commit messages in English, following Conventional Commits (`feat:`, `fix:`, `ci:`, `docs:`…).
 - Ask before adding any NuGet package, npm package or third-party GitHub Action.
-- Never commit secrets, personal data other than what is already public on the site, or
-  build output (`bin/`, `obj/`, `release/`).
+- Never commit secrets, personal data other than what is already public on the site, or build output (`bin/`, `obj/`, `release/`).
 
 ## Deployment notes
 
 - The site is currently served at `https://rportet.github.io/portfolio/`.
 - The `<base href>` stays `/` in source; the workflow rewrites it at deploy time from `BASE_HREF`.
-- On the future switch to `https://rportet.github.io/`, two values change: `BASE_HREF` in the
-  workflow and `segmentCount` in `wwwroot/404.html`. Do not change them without being asked.
+- On the future switch to `https://rportet.github.io/`, two values change: `BASE_HREF` in the workflow and `segmentCount` in `wwwroot/404.html`. Do not change them without being asked.

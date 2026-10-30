@@ -1,5 +1,3 @@
-/* Round icon-only button (design spec sections 5.1 and 5.9):
-   44 x 44 px touch target on mobile, 36 px from the lg breakpoint. */
 .theme-toggle {
     display: inline-flex;
     align-items: center;
