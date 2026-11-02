@@ -19,6 +19,8 @@ public partial class LanguageToggle
 
     private static string CurrentCulture => CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
+    private static string TargetCulture => CurrentCulture == "en" ? "fr" : "en";
+
     private static string CurrentCode => CurrentCulture.ToUpperInvariant();
 
     private string Label => Loc["LanguageToggle_Switch"];
