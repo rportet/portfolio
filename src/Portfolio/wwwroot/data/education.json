@@ -1,0 +1,41 @@
+[
+  {
+    "start": "2022-07-01",
+    "end": "2022-07-01",
+    "title": {
+      "fr": "Bac général maths, physique-chimie, mention bien",
+      "en": "French baccalaureate, maths and physics-chemistry, with honours"
+    },
+    "subtitle": {
+      "fr": "Lycée Blaise Pascal, Charbonnières-les-Bains",
+      "en": "Lycée Blaise Pascal, Charbonnières-les-Bains"
+    },
+    "compact": true
+  },
+  {
+    "start": "2022-09-01",
+    "end": "2023-06-01",
+    "title": {
+      "fr": "CPGE MP2I",
+      "en": "CPGE MP2I"
+    },
+    "subtitle": {
+      "fr": "Classe préparatoire maths, physique, informatique · Lycée Claude Fauriel, Saint-Étienne",
+      "en": "Preparatory class for engineering schools · Lycée Claude Fauriel, Saint-Étienne"
+    },
+    "compact": false
+  },
+  {
+    "start": "2023-09-01",
+    "end": "2026-08-01",
+    "title": {
+      "fr": "BUT Informatique",
+      "en": "Bachelor's in Computer Science (BUT)"
+    },
+    "subtitle": {
+      "fr": "Parcours Réalisation d'applications · IUT Clermont Auvergne, Aubière",
+      "en": "Application development track · IUT Clermont Auvergne, Aubière"
+    },
+    "compact": false
+  }
+]

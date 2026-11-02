@@ -1,0 +1,40 @@
+[
+  {
+    "type": "Apprenticeship",
+    "badge": {
+      "fr": "Alternance · 3e année",
+      "en": "Apprenticeship · 3rd year"
+    },
+    "start": "2025-09-01",
+    "end": "2026-08-01",
+    "title": {
+      "fr": "Développeur Android",
+      "en": "Android developer"
+    },
+    "company": "Openium",
+    "description": {
+      "fr": "Migration d'une application XML vers une interface hybride Fragments + Compose, puis développement d'écrans et de ViewModels (MVVM) en Jetpack Compose et Compose Multiplatform.",
+      "en": "Migrated an XML app to a hybrid Fragments + Compose UI, then built screens and ViewModels (MVVM) with Jetpack Compose and Compose Multiplatform."
+    },
+    "tags": [ "Kotlin", "Jetpack Compose", "Compose Multiplatform", "Kotlin Multiplatform", "MVVM", "Retrofit" ]
+  },
+  {
+    "type": "Internship",
+    "badge": {
+      "fr": "Stage · 2e année",
+      "en": "Internship · 2nd year"
+    },
+    "start": "2025-04-01",
+    "end": "2025-06-01",
+    "title": {
+      "fr": "Développeur ASP.NET Core Blazor",
+      "en": "ASP.NET Core Blazor developer"
+    },
+    "company": "Simpleter",
+    "description": {
+      "fr": "Développement de fonctionnalités sur un ERP en Blazor WebAssembly pour TPE et PME (formulaires, modales), avec les patterns CQRS et event sourcing.",
+      "en": "Built features for a Blazor WebAssembly ERP for small businesses (forms, modals), applying the CQRS and event sourcing patterns."
+    },
+    "tags": [ "C#", "ASP.NET Core", "Blazor WebAssembly", "CQRS", "Event sourcing" ]
+  }
+]
