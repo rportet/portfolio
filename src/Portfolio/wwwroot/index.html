@@ -35,6 +35,21 @@
             })
         })()
     </script>
+    <script>
+        (() => {
+            'use strict'
+
+            const getStoredCulture = () => {
+                try {
+                    return localStorage.getItem('culture')
+                } catch {
+                    return null
+                }
+            }
+
+            document.documentElement.lang = getStoredCulture() === 'en' ? 'en' : 'fr'
+        })()
+    </script>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/app.css" />
