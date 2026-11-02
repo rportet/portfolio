@@ -168,3 +168,22 @@ button:focus-visible,
     .loading-progress-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
+
+.rp-icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+}
+
+@media (min-width: 992px) {
+    .rp-icon-button {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+}
