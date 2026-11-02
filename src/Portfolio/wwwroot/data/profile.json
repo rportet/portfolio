@@ -1,0 +1,34 @@
+{
+  "firstName": "Rémy",
+  "lastName": "Portet",
+  "badge": {
+    "fr": "Développeur mobile & .NET",
+    "en": "Mobile & .NET developer"
+  },
+  "lead": {
+    "fr": "Fraîchement diplômé d'un BUT Informatique, après un an d'alternance en développement Android. Habitué à passer d'une technologie à l'autre, j'apprends vite ce que votre équipe utilise.",
+    "en": "Recent graduate with a Bachelor's degree in Computer Science, after a one-year apprenticeship in Android development. Used to switching technologies, I quickly learn whatever your team uses."
+  },
+  "stack": [
+    {
+      "label": {
+        "fr": "Mobile",
+        "en": "Mobile"
+      },
+      "items": [ "Kotlin", "Jetpack Compose", "Kotlin Multiplatform" ]
+    },
+    {
+      "label": {
+        "fr": "Web",
+        "en": "Web"
+      },
+      "items": [ "C#", "ASP.NET Core", "Blazor" ]
+    }
+  ],
+  "links": {
+    "gitHub": "https://github.com/rportet",
+    "linkedIn": "https://www.linkedin.com/in/r%C3%A9my-portet-23631a2b9",
+    "email": "remy@portet.org",
+    "cv": "cv/remy-portet-cv.pdf"
+  }
+}

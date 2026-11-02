@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "portfolio",
+    "title": {
+      "fr": "Ce portfolio",
+      "en": "This portfolio"
+    },
+    "tagline": {
+      "fr": "Site bilingue en Blazor WebAssembly, déployé en continu sur GitHub Pages.",
+      "en": "Bilingual Blazor WebAssembly site, continuously deployed to GitHub Pages."
+    },
+    "tags": [ "C#", "Blazor WebAssembly", "Bootstrap", "GitHub Actions" ],
+    "image": null,
+    "repositoryUrl": "https://github.com/rportet/portfolio",
+    "demoUrl": null
+  }
+]
