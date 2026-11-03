@@ -2,5 +2,7 @@
 
 public enum IconName
 {
-    Theme
+    Theme,
+    Menu,
+    Close
 }

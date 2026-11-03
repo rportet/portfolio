@@ -12,8 +12,47 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="LanguageToggle_Switch" xml:space="preserve">
+  <data name="LanguageSelector_Switch" xml:space="preserve">
     <value>Passer en français</value>
+  </data>
+  <data name="LanguageSelector_GroupLabel" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LanguageSelector_CodeFr" xml:space="preserve">
+    <value>FR</value>
+  </data>
+  <data name="LanguageSelector_CodeEn" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="LanguageSelector_NameFr" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="LanguageSelector_NameEn" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="SiteHeader_SkipToContent" xml:space="preserve">
+    <value>Skip to content</value>
+  </data>
+  <data name="SiteHeader_Logo" xml:space="preserve">
+    <value>rémy.portet</value>
+  </data>
+  <data name="SiteHeader_NavLabel" xml:space="preserve">
+    <value>Main navigation</value>
+  </data>
+  <data name="SiteHeader_NavFormation" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="SiteHeader_NavExperiences" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="SiteHeader_NavProjects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="SiteHeader_NavContact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="SiteHeader_Menu" xml:space="preserve">
+    <value>Menu</value>
   </data>
   <data name="ThemeToggle_SwitchToDark" xml:space="preserve">
     <value>Switch to dark theme</value>

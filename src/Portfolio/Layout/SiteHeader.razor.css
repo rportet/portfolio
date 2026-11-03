@@ -1,0 +1,99 @@
+.rp-header {
+    top: .75rem;
+    margin-top: .75rem;
+}
+
+.rp-skip-link:focus {
+    position: absolute;
+    top: .25rem;
+    left: calc(var(--bs-gutter-x) * .5 + .25rem);
+    z-index: 1;
+    padding: .5rem 1rem;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-pill);
+    background-color: var(--rp-surface);
+    color: var(--bs-body-color);
+    font-weight: 600;
+}
+
+.rp-header-bar {
+    padding: .25rem .25rem .25rem 1rem;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background-color: var(--rp-surface);
+}
+
+.rp-logo {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    border-radius: var(--bs-border-radius-sm);
+    color: var(--bs-body-color);
+    font-family: var(--rp-font-display);
+    font-size: var(--rp-fs-logo);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.02em;
+    text-decoration: none;
+}
+
+.rp-nav {
+    gap: 1.75rem;
+}
+
+.rp-nav-link {
+    border-radius: var(--bs-border-radius-sm);
+    color: var(--rp-nav);
+    font-size: var(--rp-fs-nav);
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.rp-nav-link:hover {
+    color: var(--bs-emphasis-color);
+}
+
+.rp-menu {
+    position: absolute;
+    top: 100%;
+    right: calc(var(--bs-gutter-x) * .5);
+    left: calc(var(--bs-gutter-x) * .5);
+    max-height: calc(100dvh - 5rem);
+    margin-top: .5rem;
+    padding: .75rem 1rem;
+    overflow-y: auto;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background-color: var(--rp-surface);
+}
+
+.rp-menu-link {
+    display: flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding-block: .25rem;
+    border-radius: var(--bs-border-radius-sm);
+    color: var(--bs-body-color);
+    font-family: var(--rp-font-display);
+    font-size: var(--rp-fs-menu);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    text-decoration: none;
+}
+
+@media (min-width: 992px) {
+    .rp-header {
+        top: 1.25rem;
+        margin-top: 1.25rem;
+    }
+
+    .rp-header-bar {
+        padding: .875rem 1rem .875rem 1.5rem;
+    }
+
+    .rp-logo {
+        min-height: 0;
+    }
+}

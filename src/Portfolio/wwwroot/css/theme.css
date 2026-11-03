@@ -89,4 +89,8 @@
   --rp-fs-h2: clamp(2rem, 1.55rem + 1.94vw, 3rem);
   --rp-fs-h3: clamp(1.3125rem, 1.114rem + .848vw, 1.75rem);
   --rp-fs-lead: clamp(1rem, .915rem + .364vw, 1.1875rem);
+  --rp-fs-logo: clamp(1.0625rem, .977rem + .364vw, 1.25rem);
+  --rp-fs-nav: .9375rem;
+  --rp-fs-menu: 1.75rem;
+  --rp-fs-language: .8125rem;
 }

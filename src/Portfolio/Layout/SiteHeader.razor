@@ -1,0 +1,29 @@
+<header class="rp-header container sticky-top" @onkeydown="OnKeyDownAsync">
+    <a class="rp-skip-link visually-hidden-focusable" href="#main-content" @onclick="OnSkipToContent" @onclick:preventDefault>@Loc["SiteHeader_SkipToContent"]</a>
+
+    <div class="rp-header-bar d-flex justify-content-between align-items-center">
+        <a class="rp-logo" href="#top">@Loc["SiteHeader_Logo"]</a>
+
+        <nav class="rp-nav d-none d-lg-flex" aria-label="@Loc["SiteHeader_NavLabel"]">
+            @foreach (var link in Links)
+            {
+                <a class="rp-nav-link" href="#@link.Fragment">@Loc[link.ResourceKey]</a>
+            }
+        </nav>
+
+        <div class="d-flex align-items-center gap-2">
+            <LanguageSelector />
+            <ThemeToggle />
+            <button type="button" class="rp-icon-button rounded-1 d-lg-none" aria-label="@Loc["SiteHeader_Menu"]" aria-expanded="@MenuExpanded" aria-controls="site-menu" @ref="menuButton" @onclick="ToggleMenu">
+                <Icon Name="MenuIcon" />
+            </button>
+        </div>
+    </div>
+
+    <nav id="site-menu" class="rp-menu d-lg-none" aria-label="@Loc["SiteHeader_NavLabel"]" hidden="@(!isMenuOpen)">
+        @foreach (var link in Links)
+        {
+            <a class="rp-menu-link" href="#@link.Fragment" @onclick="CloseMenuAsync">@Loc[link.ResourceKey]</a>
+        }
+    </nav>
+</header>

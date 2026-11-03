@@ -1,0 +1,23 @@
+.rp-language-group {
+    gap: .125rem;
+    padding: .125rem;
+    border-radius: var(--bs-border-radius-pill);
+    background-color: var(--bs-tertiary-bg);
+}
+
+.rp-language-pill {
+    height: 2rem;
+    padding: 0 .625rem;
+    border: 0;
+    border-radius: var(--bs-border-radius-pill);
+    background-color: transparent;
+    color: var(--bs-secondary-color);
+    font-size: var(--rp-fs-language);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.rp-language-pill[aria-pressed="true"] {
+    background-color: var(--bs-body-color);
+    color: var(--bs-body-bg);
+}
