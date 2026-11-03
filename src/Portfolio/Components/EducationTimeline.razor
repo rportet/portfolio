@@ -1,0 +1,25 @@
+<ol class="list-unstyled d-flex flex-column-reverse flex-lg-row mb-0">
+    @foreach (var step in steps)
+    {
+        <li class="rp-step @(step.Compact ? "rp-step-compact" : null)">
+            <span class="rp-dot rounded-circle @DotClass(step)" aria-hidden="true"></span>
+            <p class="rp-step-date">
+                <time datetime="@MachineDate(step.Start)">@step.Start.Year</time>
+                @if (step.Start.Year != step.End.Year)
+                {
+                    <text>&ndash;</text>
+                    <time datetime="@MachineDate(step.End)">@step.End.Year</time>
+                }
+            </p>
+            @if (step.Compact)
+            {
+                <p class="rp-step-compact-title">@step.Title.Value</p>
+            }
+            else
+            {
+                <h3 class="rp-step-title">@step.Title.Value</h3>
+                <p class="rp-step-subtitle">@step.Subtitle.Value</p>
+            }
+        </li>
+    }
+</ol>

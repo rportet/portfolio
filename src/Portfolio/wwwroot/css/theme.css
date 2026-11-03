@@ -96,11 +96,17 @@
   --rp-fs-badge: clamp(.75rem, .722rem + .121vw, .8125rem);
   --rp-fs-stack: clamp(1.375rem, 1.148rem + .97vw, 1.875rem);
   --rp-fs-tile: clamp(.9375rem, .881rem + .242vw, 1.0625rem);
+  --rp-fs-meta: clamp(.8125rem, .784rem + .121vw, .875rem);
+  --rp-fs-timeline: clamp(1.3125rem, 1.17rem + .606vw, 1.625rem);
+  --rp-fs-subtitle: .9375rem;
+  --rp-fs-compact: .875rem;
   --rp-card-pad: 1.25rem;
+  --rp-space-section: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
 }
 
 @media (min-width: 992px) {
   :root {
+    --rp-fs-compact: 1rem;
     --rp-card-pad: 2rem;
   }
 }
