@@ -1,0 +1,9 @@
+.rp-section-title {
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 992px) {
+    .rp-section-title {
+        margin-bottom: 2rem;
+    }
+}

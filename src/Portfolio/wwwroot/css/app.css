@@ -126,6 +126,11 @@ button:focus-visible,
     line-height: 1;
 }
 
+.rp-section {
+    margin-top: var(--rp-space-section);
+    scroll-margin-top: 6rem;
+}
+
 .rp-tag {
     display: inline-block;
     padding: .3125rem .625rem;

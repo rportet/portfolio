@@ -28,4 +28,8 @@ await using (var cultureModule = await js.InvokeAsync<IJSObjectReference>("impor
     CultureInfo.DefaultThreadCurrentUICulture = culture;
 }
 
+var content = host.Services.GetRequiredService<IContentService>();
+
+await Task.WhenAll(content.GetProfileAsync(), content.GetEducationAsync());
+
 await host.RunAsync();

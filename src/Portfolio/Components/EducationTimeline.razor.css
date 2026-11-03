@@ -1,0 +1,114 @@
+.rp-step {
+    position: relative;
+    padding-bottom: 1.5rem;
+    padding-left: 1.75rem;
+}
+
+.rp-step:first-child {
+    padding-bottom: 0;
+}
+
+.rp-dot {
+    position: absolute;
+    top: .125rem;
+    left: 0;
+    z-index: 1;
+    width: .875rem;
+    height: .875rem;
+}
+
+.rp-dot-hollow {
+    border: 2px solid var(--rp-timeline-dot-muted);
+    background-color: var(--bs-body-bg);
+}
+
+.rp-dot-past {
+    background-color: var(--bs-body-color);
+}
+
+.rp-dot-current {
+    background-color: var(--bs-primary);
+}
+
+.rp-step-compact .rp-dot {
+    top: .25rem;
+    left: .125rem;
+    width: .625rem;
+    height: .625rem;
+}
+
+.rp-step-date {
+    margin-bottom: .25rem;
+    color: var(--bs-secondary-color);
+    font-size: var(--rp-fs-meta);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.rp-step-title {
+    margin-bottom: .25rem;
+    font-size: var(--rp-fs-timeline);
+}
+
+.rp-step-subtitle {
+    margin-bottom: 0;
+    color: var(--bs-secondary-color);
+    font-size: var(--rp-fs-subtitle);
+}
+
+.rp-step-compact-title {
+    margin-bottom: 0;
+    color: var(--bs-secondary-color);
+    font-size: var(--rp-fs-compact);
+    line-height: 1.3;
+}
+
+@media (max-width: 991.98px) {
+    .rp-step-compact {
+        display: flex;
+        align-items: baseline;
+        gap: .5rem;
+    }
+
+    .rp-step-compact .rp-step-date {
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+
+    .rp-step:not(:first-child)::before {
+        content: "";
+        position: absolute;
+        top: .125rem;
+        bottom: -.25rem;
+        left: .375rem;
+        width: 2px;
+        background-color: var(--rp-border-dashed);
+    }
+}
+
+@media (min-width: 992px) {
+    .rp-step,
+    .rp-step:first-child {
+        flex: 1 1 0;
+        min-width: 0;
+        padding: 2rem 1.5rem 0 0;
+    }
+
+    .rp-dot,
+    .rp-step-compact .rp-dot {
+        top: 0;
+        left: 0;
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .rp-step:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 0;
+        left: 0;
+        height: 2px;
+        background-color: var(--rp-border-dashed);
+    }
+}
