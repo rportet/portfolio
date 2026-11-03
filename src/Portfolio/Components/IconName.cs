@@ -4,5 +4,7 @@ public enum IconName
 {
     Theme,
     Menu,
-    Close
+    Close,
+    ArrowUpRight,
+    ArrowDown
 }

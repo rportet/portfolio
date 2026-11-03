@@ -1,4 +1,5 @@
-﻿<svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
+﻿@* Arrow paths from Bootstrap Icons. Copyright (c) 2019-2024 The Bootstrap Authors, MIT License. *@
+<svg class="icon" viewBox="0 0 16 16" aria-hidden="true">
     @switch (Name)
     {
         case IconName.Theme:
@@ -10,6 +11,12 @@
             break;
         case IconName.Close:
             <path d="M3 3l10 10M13 3L3 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            break;
+        case IconName.ArrowUpRight:
+            <path fill="currentColor" fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+            break;
+        case IconName.ArrowDown:
+            <path fill="currentColor" fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
             break;
     }
 </svg>

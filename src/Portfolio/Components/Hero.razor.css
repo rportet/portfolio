@@ -1,0 +1,131 @@
+.rp-hero {
+    --bs-gutter-x: .625rem;
+    --bs-gutter-y: .625rem;
+}
+
+.rp-hero-intro {
+    padding: 1.75rem 1.25rem;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius-xl);
+    background-color: var(--rp-surface);
+}
+
+.rp-hero-badge {
+    gap: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.rp-hero-dot {
+    flex-shrink: 0;
+    width: .5rem;
+    height: .5rem;
+    background-color: var(--bs-primary);
+}
+
+.rp-hero-name {
+    margin-bottom: 1.5rem;
+}
+
+.rp-hero-name:focus-visible {
+    box-shadow: none;
+}
+
+.rp-hero-stack {
+    padding: var(--rp-card-pad);
+    border-radius: var(--bs-border-radius-xl);
+    background-color: var(--bs-primary);
+    color: var(--rp-on-primary);
+}
+
+.rp-hero-overline {
+    margin-bottom: 1.5rem;
+}
+
+.rp-stack-label {
+    margin-bottom: .5rem;
+    font-size: var(--rp-fs-badge);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.rp-stack-items {
+    font-family: var(--rp-font-display);
+    font-size: var(--rp-fs-stack);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -.02em;
+}
+
+.rp-tile {
+    --bs-btn-padding-y: 1rem;
+    --bs-btn-padding-x: 1rem;
+    --bs-btn-font-size: var(--rp-fs-tile);
+    --bs-btn-font-weight: 600;
+    --bs-btn-line-height: 1.2;
+    --bs-btn-border-radius: var(--bs-border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    width: 100%;
+    height: 100%;
+    min-height: 2.75rem;
+    text-align: start;
+}
+
+.rp-tile-surface {
+    --bs-btn-color: var(--bs-body-color);
+    --bs-btn-bg: var(--rp-surface);
+    --bs-btn-border-color: var(--bs-border-color);
+    --bs-btn-hover-color: var(--bs-body-color);
+    --bs-btn-hover-bg: var(--rp-surface-hover);
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-color: var(--bs-body-color);
+    --bs-btn-active-bg: var(--rp-surface-hover);
+    --bs-btn-active-border-color: var(--bs-primary);
+}
+
+.rp-tile-surface:hover:not(:focus-visible) {
+    box-shadow: var(--rp-shadow-hover);
+}
+
+.rp-tile-arrow {
+    display: inline-flex;
+    flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .rp-tile-arrow {
+        transition: transform .15s ease;
+    }
+
+    .rp-tile-surface:hover .rp-tile-arrow {
+        transform: translate(2px, -2px);
+    }
+}
+
+@media (min-width: 992px) {
+    .rp-hero {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+    }
+
+    .rp-hero-intro {
+        padding: 3rem 2.75rem;
+    }
+
+    .rp-stack-group + .rp-stack-group {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: var(--bs-border-width) solid color-mix(in srgb, var(--rp-on-primary) 35%, transparent);
+    }
+
+    .rp-stack-items {
+        line-height: 1.1;
+    }
+
+    .rp-tile {
+        --bs-btn-padding-y: 1.375rem;
+        --bs-btn-padding-x: 1.5rem;
+    }
+}
