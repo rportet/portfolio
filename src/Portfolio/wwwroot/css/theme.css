@@ -93,4 +93,14 @@
   --rp-fs-nav: .9375rem;
   --rp-fs-menu: 1.75rem;
   --rp-fs-language: .8125rem;
+  --rp-fs-badge: clamp(.75rem, .722rem + .121vw, .8125rem);
+  --rp-fs-stack: clamp(1.375rem, 1.148rem + .97vw, 1.875rem);
+  --rp-fs-tile: clamp(.9375rem, .881rem + .242vw, 1.0625rem);
+  --rp-card-pad: 1.25rem;
+}
+
+@media (min-width: 992px) {
+  :root {
+    --rp-card-pad: 2rem;
+  }
 }

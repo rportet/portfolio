@@ -12,6 +12,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Home_PageTitle" xml:space="preserve">
+    <value>Rémy Portet</value>
+  </data>
+  <data name="Hero_StackOverline" xml:space="preserve">
+    <value>Stack principale</value>
+  </data>
+  <data name="Hero_GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="Hero_LinkedIn" xml:space="preserve">
+    <value>LinkedIn</value>
+  </data>
+  <data name="Hero_Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Hero_Cv" xml:space="preserve">
+    <value>CV (PDF)</value>
+  </data>
+  <data name="Hero_NewTab" xml:space="preserve">
+    <value>(s'ouvre dans un nouvel onglet)</value>
+  </data>
   <data name="LanguageSelector_Switch" xml:space="preserve">
     <value>Switch to English</value>
   </data>

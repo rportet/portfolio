@@ -86,6 +86,46 @@ button:focus-visible,
     --bs-btn-font-weight: 600;
 }
 
+.btn-rp-accent {
+    --bs-btn-color: var(--rp-on-accent-2);
+    --bs-btn-bg: var(--rp-accent-2);
+    --bs-btn-border-color: var(--rp-accent-2);
+    --bs-btn-hover-color: var(--rp-on-accent-2);
+    --bs-btn-hover-bg: var(--rp-accent-2-hover);
+    --bs-btn-hover-border-color: var(--rp-accent-2-hover);
+    --bs-btn-active-color: var(--rp-on-accent-2);
+    --bs-btn-active-bg: var(--rp-accent-2-hover);
+    --bs-btn-active-border-color: var(--rp-accent-2-hover);
+    --bs-btn-disabled-color: var(--rp-on-accent-2);
+    --bs-btn-disabled-bg: var(--rp-accent-2);
+    --bs-btn-disabled-border-color: var(--rp-accent-2);
+    --bs-btn-border-radius: var(--bs-border-radius-pill);
+    --bs-btn-padding-y: .75rem;
+    --bs-btn-padding-x: 1.125rem;
+    --bs-btn-font-size: .9375rem;
+    --bs-btn-font-weight: 600;
+}
+
+.rp-overline {
+    font-size: var(--rp-fs-badge);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.rp-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: .3125rem .625rem;
+    border-radius: var(--bs-border-radius-pill);
+    background-color: var(--bs-tertiary-bg);
+    color: var(--bs-body-color);
+    font-size: var(--rp-fs-badge);
+    font-weight: 600;
+    line-height: 1;
+}
+
 .rp-tag {
     display: inline-block;
     padding: .3125rem .625rem;
@@ -98,6 +138,10 @@ button:focus-visible,
 }
 
 @media (min-width: 992px) {
+    .rp-badge {
+        padding: .375rem .75rem;
+    }
+
     .rp-tag {
         padding: .375rem .75rem;
         font-size: .8125rem;

@@ -1,0 +1,63 @@
+@if (profile is not null)
+{
+    <div class="row rp-hero">
+        <div class="col-12 col-lg-8">
+            <div class="rp-hero-intro h-100">
+                <p class="rp-badge rp-hero-badge">
+                    <span class="rp-hero-dot rounded-circle" aria-hidden="true"></span>
+                    @profile.Badge.Value
+                </p>
+                <h1 class="rp-hero-name">@profile.FirstName<br />@profile.LastName</h1>
+                <p class="lead mb-0">@profile.Lead.Value</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-4">
+            <div class="rp-hero-stack d-flex flex-column h-100">
+                <p class="rp-overline rp-hero-overline">@Loc["Hero_StackOverline"]</p>
+                <div class="mt-auto">
+                    @foreach (var group in profile.Stack)
+                    {
+                        <div class="rp-stack-group">
+                            <p class="rp-stack-label d-none d-lg-block">@group.Label.Value</p>
+                            <ul class="rp-stack-items list-unstyled mb-0">
+                                @foreach (var item in group.Items)
+                                {
+                                    <li>@item</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <a class="btn rp-tile rp-tile-surface" href="@profile.Links.GitHub" target="_blank" rel="noopener">
+                <span>@Loc["Hero_GitHub"]<span class="visually-hidden">@Loc["Hero_NewTab"]</span></span>
+                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowUpRight" /></span>
+            </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <a class="btn rp-tile rp-tile-surface" href="@profile.Links.LinkedIn" target="_blank" rel="noopener">
+                <span>@Loc["Hero_LinkedIn"]<span class="visually-hidden">@Loc["Hero_NewTab"]</span></span>
+                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowUpRight" /></span>
+            </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <a class="btn rp-tile rp-tile-surface" href="@EmailHref">
+                <span>@Loc["Hero_Email"]</span>
+                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowUpRight" /></span>
+            </a>
+        </div>
+
+        <div class="col-6 col-lg-3">
+            <a class="btn btn-rp-accent rp-tile" href="@profile.Links.Cv" download>
+                <span>@Loc["Hero_Cv"]</span>
+                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowDown" /></span>
+            </a>
+        </div>
+    </div>
+}
