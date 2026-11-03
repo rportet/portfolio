@@ -1,10 +1,9 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="container d-flex justify-content-end gap-2 py-3">
-    <LanguageToggle />
-    <ThemeToggle />
-</div>
+<div id="top">
+    <SiteHeader OnSkipToContent="FocusMainAsync" />
 
-<main class="container">
-    @Body
-</main>
+    <main id="main-content" class="container mt-3" tabindex="-1" @ref="mainElement">
+        @Body
+    </main>
+</div>

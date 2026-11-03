@@ -1,0 +1,7 @@
+main {
+    scroll-margin-top: 6rem;
+}
+
+main:focus-visible {
+    box-shadow: none;
+}
