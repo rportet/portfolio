@@ -33,18 +33,6 @@
   <data name="ContactBlock_Title" xml:space="preserve">
     <value>Contact</value>
   </data>
-  <data name="ContactBlock_Copy" xml:space="preserve">
-    <value>Copier</value>
-  </data>
-  <data name="ContactBlock_CopyLabel" xml:space="preserve">
-    <value>Copier l'adresse e-mail</value>
-  </data>
-  <data name="ContactBlock_Copied" xml:space="preserve">
-    <value>Copié</value>
-  </data>
-  <data name="ContactBlock_CopyFailed" xml:space="preserve">
-    <value>Copie impossible</value>
-  </data>
   <data name="SiteFooter_Copyright" xml:space="preserve">
     <value>© {0} Rémy Portet</value>
   </data>
@@ -66,7 +54,7 @@
   <data name="Hero_Cv" xml:space="preserve">
     <value>CV (PDF)</value>
   </data>
-  <data name="Hero_NewTab" xml:space="preserve">
+  <data name="ActionLink_NewTab" xml:space="preserve">
     <value>(s'ouvre dans un nouvel onglet)</value>
   </data>
   <data name="LanguageSelector_Switch" xml:space="preserve">
