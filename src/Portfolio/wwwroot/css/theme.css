@@ -38,6 +38,7 @@
   --rp-contrast-bg: #121216;  --rp-contrast-color: #FFFFFF;
   --rp-contrast-muted: #B8B8C4;  --rp-contrast-accent: #93A4FF;
   --rp-contrast-border: #3A3A44;
+  --rp-contrast-hover-bg: rgba(255,255,255,.08);
   --rp-surface-hover: #FFFFFF;
   --rp-shadow-hover: 0 8px 24px -8px rgba(18,18,22,.14);
 }
@@ -72,6 +73,7 @@
   --rp-contrast-bg: #F1F1F4;  --rp-contrast-color: #101014;
   --rp-contrast-muted: #4A4A55;  --rp-contrast-accent: #484DD2;
   --rp-contrast-border: #C9C9D2;
+  --rp-contrast-hover-bg: rgba(16,16,20,.06);
   --rp-surface-hover: #20202A;
   --rp-shadow-hover: none;
 }
@@ -101,6 +103,8 @@
   --rp-fs-subtitle: .9375rem;
   --rp-fs-compact: .875rem;
   --rp-fs-card-text: clamp(.875rem, .847rem + .121vw, .9375rem);
+  --rp-fs-contact: clamp(1.875rem, 1.14rem + 3.15vw, 3.5rem);
+  --rp-fs-footer: .8125rem;
   --rp-card-pad: 1.25rem;
   --rp-space-section: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
   --rp-space-section-next: clamp(2.5rem, 2.273rem + .97vw, 3rem);

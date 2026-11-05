@@ -1,0 +1,80 @@
+.rp-contact {
+    --bs-focus-ring-color: var(--rp-contrast-accent);
+    gap: 1.5rem;
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--bs-border-radius-xl);
+    background-color: var(--rp-contrast-bg);
+    color: var(--rp-contrast-color);
+}
+
+.rp-contact-title {
+    margin-bottom: 1rem;
+    color: var(--rp-contrast-muted);
+    font-family: var(--bs-body-font-family);
+}
+
+.rp-contact-email-row {
+    gap: .5rem;
+}
+
+.rp-contact-email {
+    color: var(--rp-contrast-color);
+    font-family: var(--rp-font-display);
+    font-size: var(--rp-fs-contact);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -.035em;
+    text-decoration: none;
+}
+
+.rp-contact-email:hover {
+    color: var(--rp-contrast-color);
+    text-decoration: underline;
+}
+
+.rp-contact-email-domain {
+    color: var(--rp-contrast-accent);
+}
+
+.rp-contact-copy {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0 .5rem;
+    border: 0;
+    border-radius: var(--bs-border-radius-sm);
+    background-color: transparent;
+    color: var(--rp-contrast-muted);
+    font-size: var(--rp-fs-meta);
+    font-weight: 600;
+}
+
+.rp-contact-copy:hover {
+    color: var(--rp-contrast-color);
+}
+
+.rp-contact-status {
+    color: var(--rp-contrast-muted);
+    font-size: var(--rp-fs-meta);
+    font-weight: 600;
+}
+
+.rp-contact-actions {
+    gap: .5rem;
+}
+
+.rp-contact-action {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+@media (min-width: 992px) {
+    .rp-contact {
+        gap: 2rem;
+        padding: 3.5rem 2.75rem;
+    }
+
+    .rp-contact-actions {
+        flex-shrink: 0;
+    }
+}
