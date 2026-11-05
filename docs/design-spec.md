@@ -345,7 +345,7 @@ Grille `row g-3` (gouttière 10 px en mobile).
 - En-tête de card (`d-flex justify-content-between`) :
   - **badge de type** en pilule : « Alternance · 3e année » en `--bs-primary-bg-subtle` / `--bs-primary-text-emphasis` ; « Stage · 2e année » en `--rp-accent-2-bg-subtle` / `--rp-accent-2-text` ;
   - période alignée à droite (14/600, secondaire).
-- Titre `h3` (Bricolage), description d'une à deux lignes (`--rp-text-muted-strong`), puis la liste des tags (§5.7).
+- Titre `h3` (Bricolage), puis l'entreprise sous le titre (15 px, `--bs-secondary-color`), description d'une à deux lignes (`--rp-text-muted-strong`), puis la liste des tags (§5.7).
 - **Mobile** : badge raccourci (« Alternance », « Stage »), description masquée (`d-none d-md-block`) pour garder une lecture en moins d'une minute. Les tags restent visibles.
 - La card n'est pas cliquable : pas d'état de survol.
 
@@ -385,9 +385,9 @@ Cible tactile minimale de 44 × 44 px en mobile pour toutes les variantes.
 ### 5.10 Bloc Contact (`<ContactBlock>`)
 
 - Bloc pleine largeur du container, fond `--rp-contrast-bg`, rayon xl, padding 56 × 44 px (28 × 20 en mobile).
-- **Desktop** : `d-flex justify-content-between align-items-end`. À gauche, le libellé « Contact » (`--rp-contrast-muted`) puis l'e-mail en Bricolage 56/800 sur deux lignes (« remy.portet » / « @email.com », la seconde en `--rp-contrast-accent`). À droite, les boutons GitHub ↗, LinkedIn ↗ et CV ↓ (le CV en `.btn-rp-accent`).
+- **Desktop** : `d-flex justify-content-between align-items-end`. À gauche, le libellé « Contact » (`--rp-contrast-muted`) puis l'e-mail en Bricolage 56/800 sur une seule ligne (« remy@portet.org », avec « @portet.org » en `--rp-contrast-accent`), avec retour à la ligne de sécurité si la largeur manque. À droite, les boutons GitHub ↗, LinkedIn ↗ et CV ↓ (le CV en `.btn-rp-accent`).
 - **Mobile** : empilement, e-mail en 30 px, boutons sur une ligne avec retour à la ligne si besoin. Le CV peut être omis ici, puisqu'il est déjà dans le hero.
-- L'e-mail est un lien `mailto:`. Ajouter un bouton « Copier » discret qui donne un retour « Copié » via `aria-live` (optionnel).
+- L'e-mail est un lien `mailto:`.
 - Pas de formulaire.
 
 ### 5.11 Pied de page (`<SiteFooter>`)

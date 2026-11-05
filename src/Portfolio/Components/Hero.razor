@@ -33,31 +33,19 @@
         </div>
 
         <div class="col-6 col-lg-3">
-            <a class="btn rp-tile rp-tile-surface" href="@profile.Links.GitHub" target="_blank" rel="noopener">
-                <span>@Loc["Hero_GitHub"]<span class="visually-hidden">@Loc["Hero_NewTab"]</span></span>
-                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowUpRight" /></span>
-            </a>
+            <ActionLink Href="@profile.Links.GitHub" Text="@Loc["Hero_GitHub"]" Icon="IconName.ArrowUpRight" Behavior="LinkBehavior.NewTab" Variant="ActionLinkVariant.Tile" />
         </div>
 
         <div class="col-6 col-lg-3">
-            <a class="btn rp-tile rp-tile-surface" href="@profile.Links.LinkedIn" target="_blank" rel="noopener">
-                <span>@Loc["Hero_LinkedIn"]<span class="visually-hidden">@Loc["Hero_NewTab"]</span></span>
-                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowUpRight" /></span>
-            </a>
+            <ActionLink Href="@profile.Links.LinkedIn" Text="@Loc["Hero_LinkedIn"]" Icon="IconName.ArrowUpRight" Behavior="LinkBehavior.NewTab" Variant="ActionLinkVariant.Tile" />
         </div>
 
         <div class="col-6 col-lg-3">
-            <a class="btn rp-tile rp-tile-surface" href="@EmailHref">
-                <span>@Loc["Hero_Email"]</span>
-                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowUpRight" /></span>
-            </a>
+            <ActionLink Href="@EmailHref" Text="@Loc["Hero_Email"]" Icon="IconName.ArrowUpRight" Variant="ActionLinkVariant.Tile" />
         </div>
 
         <div class="col-6 col-lg-3">
-            <a class="btn btn-rp-accent rp-tile" href="@profile.Links.Cv" download>
-                <span>@Loc["Hero_Cv"]</span>
-                <span class="rp-tile-arrow"><Icon Name="IconName.ArrowDown" /></span>
-            </a>
+            <ActionLink Href="@profile.Links.Cv" Text="@Loc["Hero_Cv"]" Icon="IconName.ArrowDown" Behavior="LinkBehavior.Download" Variant="ActionLinkVariant.TileAccent" />
         </div>
     </div>
 }
