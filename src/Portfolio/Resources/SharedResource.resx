@@ -30,6 +30,27 @@
   <data name="ExperienceCard_BadgeInternship" xml:space="preserve">
     <value>Stage</value>
   </data>
+  <data name="ContactBlock_Title" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="ContactBlock_Copy" xml:space="preserve">
+    <value>Copier</value>
+  </data>
+  <data name="ContactBlock_CopyLabel" xml:space="preserve">
+    <value>Copier l'adresse e-mail</value>
+  </data>
+  <data name="ContactBlock_Copied" xml:space="preserve">
+    <value>Copié</value>
+  </data>
+  <data name="ContactBlock_CopyFailed" xml:space="preserve">
+    <value>Copie impossible</value>
+  </data>
+  <data name="SiteFooter_Copyright" xml:space="preserve">
+    <value>© {0} Rémy Portet</value>
+  </data>
+  <data name="SiteFooter_Stack" xml:space="preserve">
+    <value>Blazor WebAssembly · GitHub Pages</value>
+  </data>
   <data name="Hero_StackOverline" xml:space="preserve">
     <value>Stack principale</value>
   </data>

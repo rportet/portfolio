@@ -1,0 +1,33 @@
+@if (profile is not null)
+{
+    <div class="rp-contact d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-end">
+        <div>
+            <h2 class="rp-overline rp-contact-title">@Loc["ContactBlock_Title"]</h2>
+            <div class="rp-contact-email-row d-flex flex-wrap align-items-end">
+                <a class="rp-contact-email" href="@EmailHref">
+                    <span class="d-block">@emailLocalPart</span>
+                    <span class="rp-contact-email-domain d-block">@emailDomain</span>
+                </a>
+                <div class="d-flex align-items-center">
+                    <button type="button" class="rp-contact-copy" aria-label="@Loc["ContactBlock_CopyLabel"]" @onclick="CopyAsync">@Loc["ContactBlock_Copy"]</button>
+                    <span class="rp-contact-status" role="status" aria-live="polite">@copyStatus</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="rp-contact-actions d-flex flex-wrap">
+            <a class="btn btn-outline-rp-contrast rp-contact-action" href="@profile.Links.GitHub" target="_blank" rel="noopener">
+                <span>@Loc["Hero_GitHub"]<span class="visually-hidden">@Loc["Hero_NewTab"]</span></span>
+                <Icon Name="IconName.ArrowUpRight" />
+            </a>
+            <a class="btn btn-outline-rp-contrast rp-contact-action" href="@profile.Links.LinkedIn" target="_blank" rel="noopener">
+                <span>@Loc["Hero_LinkedIn"]<span class="visually-hidden">@Loc["Hero_NewTab"]</span></span>
+                <Icon Name="IconName.ArrowUpRight" />
+            </a>
+            <a class="btn btn-rp-accent rp-contact-action" href="@profile.Links.Cv" download>
+                <span>@Loc["Hero_Cv"]</span>
+                <Icon Name="IconName.ArrowDown" />
+            </a>
+        </div>
+    </div>
+}

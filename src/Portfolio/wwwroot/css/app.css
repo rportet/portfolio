@@ -106,6 +106,26 @@ button:focus-visible,
     --bs-btn-font-weight: 600;
 }
 
+.btn-outline-rp-contrast {
+    --bs-btn-color: var(--rp-contrast-color);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--rp-contrast-border);
+    --bs-btn-hover-color: var(--rp-contrast-color);
+    --bs-btn-hover-bg: var(--rp-contrast-hover-bg);
+    --bs-btn-hover-border-color: var(--rp-contrast-border);
+    --bs-btn-active-color: var(--rp-contrast-color);
+    --bs-btn-active-bg: var(--rp-contrast-hover-bg);
+    --bs-btn-active-border-color: var(--rp-contrast-border);
+    --bs-btn-disabled-color: var(--rp-contrast-color);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--rp-contrast-border);
+    --bs-btn-border-radius: var(--bs-border-radius-pill);
+    --bs-btn-padding-y: .75rem;
+    --bs-btn-padding-x: 1.125rem;
+    --bs-btn-font-size: .9375rem;
+    --bs-btn-font-weight: 600;
+}
+
 .rp-overline {
     font-size: var(--rp-fs-badge);
     font-weight: 700;
