@@ -1,0 +1,9 @@
+.rp-tag-list {
+    gap: .3125rem;
+}
+
+@media (min-width: 992px) {
+    .rp-tag-list {
+        gap: .375rem;
+    }
+}

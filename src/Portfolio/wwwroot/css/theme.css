@@ -100,8 +100,10 @@
   --rp-fs-timeline: clamp(1.3125rem, 1.17rem + .606vw, 1.625rem);
   --rp-fs-subtitle: .9375rem;
   --rp-fs-compact: .875rem;
+  --rp-fs-card-text: clamp(.875rem, .847rem + .121vw, .9375rem);
   --rp-card-pad: 1.25rem;
   --rp-space-section: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  --rp-space-section-next: clamp(2.5rem, 2.273rem + .97vw, 3rem);
 }
 
 @media (min-width: 992px) {

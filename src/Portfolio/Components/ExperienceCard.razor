@@ -1,0 +1,15 @@
+<article class="rp-experience-card h-100">
+    <div class="rp-experience-header d-flex flex-wrap justify-content-between align-items-center">
+        <span class="rp-badge @BadgeClass">
+            <span class="d-md-none">@ShortBadge</span>
+            <span class="d-none d-md-inline">@Experience.Badge.Value</span>
+        </span>
+        <p class="rp-experience-period mb-0">
+            <time datetime="@MachineDate(Experience.Start)">@DisplayDate(Experience.Start)</time> &ndash; <time datetime="@MachineDate(Experience.End)">@DisplayDate(Experience.End)</time>
+        </p>
+    </div>
+    <h3 class="rp-experience-title">@Experience.Title.Value</h3>
+    <p class="rp-experience-company">@Experience.Company</p>
+    <p class="rp-experience-description d-none d-md-block">@Experience.Description.Value</p>
+    <TagList Tags="Experience.Tags" />
+</article>

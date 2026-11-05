@@ -10,10 +10,10 @@ public partial class SiteHeader
 {
     private static readonly HeaderLink[] Links =
     [
-        new("formation", "SiteHeader_NavFormation"),
-        new("experiences", "SiteHeader_NavExperiences"),
-        new("projets", "SiteHeader_NavProjects"),
-        new("contact", "SiteHeader_NavContact")
+        new(SectionIds.Formation, "SiteHeader_NavFormation"),
+        new(SectionIds.Experiences, "SiteHeader_NavExperiences"),
+        new(SectionIds.Projects, "SiteHeader_NavProjects"),
+        new(SectionIds.Contact, "SiteHeader_NavContact")
     ];
 
     private ElementReference menuButton;
