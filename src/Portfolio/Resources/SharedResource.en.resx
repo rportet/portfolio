@@ -18,6 +18,18 @@
   <data name="Home_EducationTitle" xml:space="preserve">
     <value>Education</value>
   </data>
+  <data name="Home_ExperiencesTitle" xml:space="preserve">
+    <value>Experience</value>
+  </data>
+  <data name="TagList_Label" xml:space="preserve">
+    <value>Technologies</value>
+  </data>
+  <data name="ExperienceCard_BadgeApprenticeship" xml:space="preserve">
+    <value>Apprenticeship</value>
+  </data>
+  <data name="ExperienceCard_BadgeInternship" xml:space="preserve">
+    <value>Internship</value>
+  </data>
   <data name="Hero_StackOverline" xml:space="preserve">
     <value>Main stack</value>
   </data>

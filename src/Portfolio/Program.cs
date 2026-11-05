@@ -30,6 +30,6 @@ await using (var cultureModule = await js.InvokeAsync<IJSObjectReference>("impor
 
 var content = host.Services.GetRequiredService<IContentService>();
 
-await Task.WhenAll(content.GetProfileAsync(), content.GetEducationAsync());
+await Task.WhenAll(content.GetProfileAsync(), content.GetEducationAsync(), content.GetExperiencesAsync());
 
 await host.RunAsync();
