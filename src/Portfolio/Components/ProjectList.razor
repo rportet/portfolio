@@ -1,0 +1,11 @@
+@if (projects.Count > 0)
+{
+    <ul class="rp-project-list row list-unstyled mb-0 @RowClass">
+        @foreach (var project in projects)
+        {
+            <li class="col">
+                <ProjectCard Project="project" />
+            </li>
+        }
+    </ul>
+}

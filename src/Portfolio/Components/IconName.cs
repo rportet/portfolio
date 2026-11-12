@@ -6,5 +6,6 @@ public enum IconName
     Menu,
     Close,
     ArrowUpRight,
-    ArrowDown
+    ArrowDown,
+    ArrowRight
 }
