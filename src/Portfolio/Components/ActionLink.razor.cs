@@ -38,6 +38,8 @@ public partial class ActionLink
         ActionLinkVariant.TileAccent => "btn btn-rp-accent rp-tile",
         ActionLinkVariant.ContrastOutline => "btn btn-outline-rp-contrast rp-action-link-pill",
         ActionLinkVariant.Accent => "btn btn-rp-accent rp-action-link-pill",
+        ActionLinkVariant.Primary => "btn btn-primary rp-action-link-pill",
+        ActionLinkVariant.Outline => "btn btn-rp-outline rp-action-link-pill",
         _ => throw new InvalidOperationException($"Unknown action link variant '{Variant}'.")
     };
 }

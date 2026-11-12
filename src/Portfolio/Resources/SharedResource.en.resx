@@ -39,6 +39,33 @@
   <data name="SiteFooter_Stack" xml:space="preserve">
     <value>Blazor WebAssembly · GitHub Pages</value>
   </data>
+  <data name="ProjectDetail_PageTitle" xml:space="preserve">
+    <value>{0} · Rémy Portet</value>
+  </data>
+  <data name="ProjectDetail_Back" xml:space="preserve">
+    <value>Back to projects</value>
+  </data>
+  <data name="ProjectDetail_ViewCode" xml:space="preserve">
+    <value>View the code</value>
+  </data>
+  <data name="ProjectDetail_ViewDemo" xml:space="preserve">
+    <value>View the demo</value>
+  </data>
+  <data name="ProjectDetail_ContextTitle" xml:space="preserve">
+    <value>Context</value>
+  </data>
+  <data name="ProjectDetail_HighlightsTitle" xml:space="preserve">
+    <value>Technical choices</value>
+  </data>
+  <data name="NotFound_PageTitle" xml:space="preserve">
+    <value>Page not found · Rémy Portet</value>
+  </data>
+  <data name="NotFound_Title" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="NotFound_Text" xml:space="preserve">
+    <value>The page you are looking for does not exist.</value>
+  </data>
   <data name="Hero_StackOverline" xml:space="preserve">
     <value>Main stack</value>
   </data>

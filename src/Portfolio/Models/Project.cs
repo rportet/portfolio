@@ -6,5 +6,8 @@ public sealed record Project(
     LocalizedText Tagline,
     IReadOnlyList<string> Tags,
     string? Image,
+    LocalizedText? ImageAlt,
     string? RepositoryUrl,
-    string? DemoUrl);
+    string? DemoUrl,
+    LocalizedText Context,
+    IReadOnlyList<ProjectHighlight> Highlights);
