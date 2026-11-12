@@ -1,0 +1,18 @@
+<article class="rp-project-card d-flex flex-column h-100">
+    @if (!string.IsNullOrWhiteSpace(Project.Image) && !string.IsNullOrWhiteSpace(Project.ImageAlt?.Value))
+    {
+        <div class="rp-project-card-media ratio ratio-16x9">
+            <img class="rp-project-card-image" src="@Project.Image" alt="@Project.ImageAlt.Value" />
+        </div>
+    }
+    <div class="rp-project-card-body d-flex flex-grow-1 justify-content-between align-items-end">
+        <div class="rp-project-card-text">
+            <h3 class="rp-project-card-title"><a class="rp-project-card-link stretched-link" href="@Href">@Project.Title.Value</a></h3>
+            <p class="rp-project-card-tagline mb-0">@Project.Tagline.Value</p>
+            <div class="rp-project-card-tags d-none d-sm-block">
+                <TagList Tags="Project.Tags" />
+            </div>
+        </div>
+        <span class="rp-project-card-arrow rounded-circle" aria-hidden="true"><Icon Name="IconName.ArrowRight" /></span>
+    </div>
+</article>

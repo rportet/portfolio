@@ -351,7 +351,7 @@ Grille `row g-3` (gouttière 10 px en mobile).
 
 ### 5.6 Card de projet (`<ProjectCard>`)
 
-- Grille : le premier projet est mis en avant en `col-12 col-lg-7`, les suivants en `col-12 col-md-6 col-lg-5`. À partir de 3 projets, passer en `row-cols-1 row-cols-md-2` uniforme.
+- Grille : un projet seul occupe toute la largeur (`row-cols-1`). À partir de 2 projets, grille uniforme `row-cols-1 row-cols-md-2` pour tous les projets, sans mise en avant du premier.
 - Structure :
   - image en `.ratio .ratio-16x9` (mobile `16x10`), `object-fit: cover`, coins hauts arrondis par le `overflow: hidden` de la card ;
   - corps `d-flex justify-content-between align-items-end`, avec à gauche le titre (Bricolage 28/700), l'accroche (15 px) et les tags, à droite un **bouton rond de 52 px** (44 px en mobile) `--bs-body-color` / `--bs-body-bg` portant une flèche →.

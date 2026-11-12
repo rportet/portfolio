@@ -1,12 +1,15 @@
 [
   {
     "slug": "portfolio",
-    "title": { "fr": "Ce portfolio", "en": "This portfolio" },
+    "title": {
+      "fr": "Ce portfolio",
+      "en": "This portfolio"
+    },
     "tagline": {
       "fr": "Site bilingue en Blazor WebAssembly, déployé en continu sur GitHub Pages.",
       "en": "Bilingual Blazor WebAssembly site, continuously deployed to GitHub Pages."
     },
-    "tags": ["C#", "Blazor WebAssembly", "Bootstrap", "GitHub Actions"],
+    "tags": [ "C#", "Blazor WebAssembly", "Bootstrap", "GitHub Actions" ],
     "image": null,
     "imageAlt": null,
     "repositoryUrl": "https://github.com/rportet/portfolio",
@@ -17,42 +20,60 @@
     },
     "highlights": [
       {
-        "title": { "fr": "Le contenu séparé du code", "en": "Content separated from code" },
+        "title": {
+          "fr": "Le contenu séparé du code",
+          "en": "Content separated from code"
+        },
         "text": {
           "fr": "Formation, expériences et projets sont des fichiers JSON lus dans des records C#. Ajouter un projet ne demande aucune modification de composant, et la désérialisation par génération de source reste fiable malgré l'élagage du code à la publication.",
           "en": "Education, experience and projects are JSON files read into C# records. Adding a project requires no component change, and source-generated deserialization stays reliable despite code trimming at publish time."
         }
       },
       {
-        "title": { "fr": "Un site bilingue", "en": "A bilingual site" },
+        "title": {
+          "fr": "Un site bilingue",
+          "en": "A bilingual site"
+        },
         "text": {
           "fr": "Les textes d'interface sont dans des fichiers .resx, le contenu porte ses deux traductions côte à côte. La langue choisie est mémorisée et appliquée au démarrage, avant le premier affichage, selon la méthode documentée par Microsoft.",
           "en": "Interface strings live in .resx files, while content carries both translations side by side. The chosen language is stored and applied at startup, before the first render, following Microsoft's documented approach."
         }
       },
       {
-        "title": { "fr": "Des composants lisibles", "en": "Readable components" },
+        "title": {
+          "fr": "Des composants lisibles",
+          "en": "Readable components"
+        },
         "text": {
           "fr": "Balisage, logique et style dans trois fichiers distincts par composant, avec isolation CSS. Le thème clair et sombre repose sur des tokens de design par-dessus les variables CSS de Bootstrap, sans son JavaScript : l'interactivité est écrite en C#.",
           "en": "Markup, logic and style in three separate files per component, with CSS isolation. Light and dark themes rely on design tokens on top of Bootstrap's CSS variables, without its JavaScript: interactivity is written in C#."
         }
       },
       {
-        "title": { "fr": "L'accessibilité dès le départ", "en": "Accessibility from the start" },
+        "title": {
+          "fr": "L'accessibilité dès le départ",
+          "en": "Accessibility from the start"
+        },
         "text": {
           "fr": "Lien d'évitement, focus visible sur chaque élément, cibles tactiles de 44 px, langue indiquée sur chaque libellé et annonce des liens qui ouvrent un nouvel onglet.",
           "en": "Skip link, visible focus on every element, 44 px touch targets, language set on every label and announcement of links that open a new tab."
         }
       },
       {
-        "title": { "fr": "Le déploiement continu", "en": "Continuous deployment" },
+        "title": {
+          "fr": "Le déploiement continu",
+          "en": "Continuous deployment"
+        },
         "text": {
           "fr": "Chaque merge sur main est compilé et publié par GitHub Actions. Les actions sont épinglées par empreinte SHA, et une redirection gère les URL profondes sur GitHub Pages.",
           "en": "Every merge to main is built and published by GitHub Actions. Actions are pinned by SHA, and a redirect handles deep URLs on GitHub Pages."
         }
       },
       {
-        "title": { "fr": "Une méthode de travail avec un agent", "en": "Working with a coding agent" },
+        "title": {
+          "fr": "Une méthode de travail avec un agent",
+          "en": "Working with a coding agent"
+        },
         "text": {
           "fr": "Développé avec Claude Code : une branche et une pull request par tâche, chaque modification relue avant commit, et des règles explicites dans un fichier CLAUDE.md versionné avec le code.",
           "en": "Built with Claude Code: one branch and one pull request per task, every change reviewed before commit, and explicit rules in a CLAUDE.md file versioned with the code."
