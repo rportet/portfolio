@@ -126,6 +126,26 @@ button:focus-visible,
     --bs-btn-font-weight: 600;
 }
 
+.btn-rp-outline {
+    --bs-btn-color: var(--bs-body-color);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--bs-border-color);
+    --bs-btn-hover-color: var(--bs-body-color);
+    --bs-btn-hover-bg: transparent;
+    --bs-btn-hover-border-color: var(--bs-primary);
+    --bs-btn-active-color: var(--bs-body-color);
+    --bs-btn-active-bg: transparent;
+    --bs-btn-active-border-color: var(--bs-primary);
+    --bs-btn-disabled-color: var(--bs-body-color);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--bs-border-color);
+    --bs-btn-border-radius: var(--bs-border-radius-pill);
+    --bs-btn-padding-y: .75rem;
+    --bs-btn-padding-x: 1.125rem;
+    --bs-btn-font-size: .9375rem;
+    --bs-btn-font-weight: 600;
+}
+
 .rp-overline {
     font-size: var(--rp-fs-badge);
     font-weight: 700;

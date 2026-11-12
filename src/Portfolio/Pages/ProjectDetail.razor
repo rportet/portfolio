@@ -1,0 +1,52 @@
+@page "/projets/{Slug}"
+
+@if (project is not null)
+{
+    <PageTitle>@PageTitleText</PageTitle>
+
+    <a class="rp-project-back" href="#@SectionIds.Projects">@Loc["ProjectDetail_Back"]</a>
+
+    <h1 class="rp-project-title">@project.Title.Value</h1>
+    <p class="lead">@project.Tagline.Value</p>
+    <TagList Tags="project.Tags" />
+
+    <div class="rp-project-actions d-flex flex-wrap">
+        @if (project.RepositoryUrl is not null)
+        {
+            <ActionLink Href="@project.RepositoryUrl" Text="@Loc["ProjectDetail_ViewCode"]" Icon="IconName.ArrowUpRight" Behavior="LinkBehavior.NewTab" Variant="ActionLinkVariant.Outline" />
+        }
+        @if (project.DemoUrl is not null)
+        {
+            <ActionLink Href="@project.DemoUrl" Text="@Loc["ProjectDetail_ViewDemo"]" Icon="IconName.ArrowUpRight" Behavior="LinkBehavior.NewTab" Variant="ActionLinkVariant.Primary" />
+        }
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(project.Image) && !string.IsNullOrWhiteSpace(project.ImageAlt?.Value))
+    {
+        <img class="rp-project-image" src="@project.Image" alt="@project.ImageAlt.Value" width="@ImageWidth" height="@ImageHeight" />
+    }
+
+    <section class="rp-section">
+        <SectionTitle Text="@Loc["ProjectDetail_ContextTitle"]" />
+        <p class="rp-project-context mb-0">@project.Context.Value</p>
+    </section>
+
+    <section class="rp-section">
+        <SectionTitle Text="@Loc["ProjectDetail_HighlightsTitle"]" />
+        <ul class="rp-project-highlights row list-unstyled mb-0">
+            @foreach (var highlight in project.Highlights)
+            {
+                <li class="col-12 col-lg-6">
+                    <div class="rp-project-highlight h-100">
+                        <h3 class="rp-project-highlight-title">@highlight.Title.Value</h3>
+                        <p class="rp-project-highlight-text mb-0">@highlight.Text.Value</p>
+                    </div>
+                </li>
+            }
+        </ul>
+    </section>
+
+    <section id="@SectionIds.Contact" class="rp-section">
+        <ContactBlock />
+    </section>
+}

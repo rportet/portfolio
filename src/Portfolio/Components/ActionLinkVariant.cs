@@ -5,5 +5,7 @@ public enum ActionLinkVariant
     Tile,
     TileAccent,
     ContrastOutline,
-    Accent
+    Accent,
+    Primary,
+    Outline
 }
