@@ -3,10 +3,11 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.Localization;
 using Portfolio.Components;
 using Portfolio.Resources;
+using Portfolio.Services;
 
 namespace Portfolio.Layout;
 
-public partial class SiteHeader
+public partial class SiteHeader : IDisposable
 {
     private static readonly HeaderLink[] Links =
     [
@@ -22,12 +23,22 @@ public partial class SiteHeader
     [Inject]
     private IStringLocalizer<SharedResource> Loc { get; set; } = default!;
 
+    [Inject]
+    private ActiveSectionState ActiveSection { get; set; } = default!;
+
     [Parameter]
     public EventCallback OnSkipToContent { get; set; }
 
     private string MenuExpanded => isMenuOpen ? "true" : "false";
 
     private IconName MenuIcon => isMenuOpen ? IconName.Close : IconName.Menu;
+
+    protected override void OnInitialized()
+    {
+        ActiveSection.OnChange += StateHasChanged;
+    }
+
+    private string? AriaCurrent(HeaderLink link) => link.Fragment == ActiveSection.SectionId ? "location" : null;
 
     private void ToggleMenu() => isMenuOpen = !isMenuOpen;
 
@@ -43,6 +54,11 @@ public partial class SiteHeader
         {
             await CloseMenuAsync();
         }
+    }
+
+    public void Dispose()
+    {
+        ActiveSection.OnChange -= StateHasChanged;
     }
 
     private sealed record HeaderLink(string Fragment, string ResourceKey);

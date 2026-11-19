@@ -7,7 +7,7 @@
         <nav class="rp-nav d-none d-lg-flex" aria-label="@Loc["SiteHeader_NavLabel"]">
             @foreach (var link in Links)
             {
-                <a class="rp-nav-link" href="#@link.Fragment">@Loc[link.ResourceKey]</a>
+                <a class="rp-nav-link" href="#@link.Fragment" aria-current="@AriaCurrent(link)">@Loc[link.ResourceKey]</a>
             }
         </nav>
 
@@ -23,7 +23,7 @@
     <nav id="site-menu" class="rp-menu d-lg-none" aria-label="@Loc["SiteHeader_NavLabel"]" hidden="@(!isMenuOpen)">
         @foreach (var link in Links)
         {
-            <a class="rp-menu-link" href="#@link.Fragment" @onclick="CloseMenuAsync">@Loc[link.ResourceKey]</a>
+            <a class="rp-menu-link" href="#@link.Fragment" aria-current="@AriaCurrent(link)" @onclick="CloseMenuAsync">@Loc[link.ResourceKey]</a>
         }
     </nav>
 </header>
