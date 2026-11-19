@@ -41,7 +41,7 @@ public partial class LanguageSelector
         await using var module = await JS.InvokeAsync<IJSObjectReference>("import", "./js/culture.js");
         await module.InvokeVoidAsync("setCulture", culture);
 
-        Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+        Navigation.Refresh(forceReload: true);
     }
 
     private sealed record Language(string Culture, string CodeKey, string NameKey);
