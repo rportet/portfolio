@@ -69,19 +69,22 @@
   <data name="NotFound_Text" xml:space="preserve">
     <value>La page que vous cherchez n'existe pas.</value>
   </data>
+  <data name="NotFound_Home" xml:space="preserve">
+    <value>Revenir à l'accueil</value>
+  </data>
   <data name="Hero_StackOverline" xml:space="preserve">
     <value>Stack principale</value>
   </data>
-  <data name="Hero_GitHub" xml:space="preserve">
+  <data name="Link_GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
-  <data name="Hero_LinkedIn" xml:space="preserve">
+  <data name="Link_LinkedIn" xml:space="preserve">
     <value>LinkedIn</value>
   </data>
-  <data name="Hero_Email" xml:space="preserve">
+  <data name="Link_Email" xml:space="preserve">
     <value>E-mail</value>
   </data>
-  <data name="Hero_Cv" xml:space="preserve">
+  <data name="Link_Cv" xml:space="preserve">
     <value>CV (PDF)</value>
   </data>
   <data name="ActionLink_NewTab" xml:space="preserve">
