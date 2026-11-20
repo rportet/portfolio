@@ -96,3 +96,4 @@ For any change to configuration, infrastructure, build, deployment or dependenci
 - The site is currently served at `https://rportet.github.io/portfolio/`.
 - The `<base href>` stays `/` in source; the workflow rewrites it at deploy time from `BASE_HREF`.
 - On the future switch to `https://rportet.github.io/`, two values change: `BASE_HREF` in the workflow and `segmentCount` in `wwwroot/404.html`. Do not change them without being asked.
+- The Open Graph `og:url` and `og:image` in `wwwroot/index.html` are absolute URLs: update them together with `BASE_HREF` and `segmentCount` when switching to `https://rportet.github.io/`.

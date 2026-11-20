@@ -1,12 +1,12 @@
 <div class="rp-language-group d-none d-lg-inline-flex" role="group" aria-label="@Loc["LanguageSelector_GroupLabel"]">
     @foreach (var language in Languages)
     {
-        <button type="button" class="rp-language-pill" lang="@language.Culture" aria-label="@Loc[language.NameKey]" aria-pressed="@AriaPressed(language)" @onclick="() => SwitchToAsync(language.Culture)">
-            @Loc[language.CodeKey]
+        <button type="button" class="rp-language-pill" lang="@language.Culture" aria-pressed="@AriaPressed(language)" @onclick="() => SwitchToAsync(language.Culture)">
+            @Loc[language.CodeKey]<span class="visually-hidden"> – @Loc[language.NameKey]</span>
         </button>
     }
 </div>
 
-<button type="button" class="rp-icon-button rounded-circle d-lg-none" lang="@TargetCulture" aria-label="@Loc["LanguageSelector_Switch"]" @onclick="() => SwitchToAsync(TargetCulture)">
-    @Loc[CurrentCodeKey]
+<button type="button" class="rp-icon-button rounded-circle d-lg-none" @onclick="() => SwitchToAsync(TargetCulture)">
+    @Loc[CurrentCodeKey]<span class="visually-hidden" lang="@TargetCulture"> – @Loc["LanguageSelector_Switch"]</span>
 </button>
